@@ -16,22 +16,18 @@
 }
 
 /// Breakpoints
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == vars.$bkp-376 {
-    @media screen and (min-width: 376px) {
-      @content;
-    }
-  } @else if $breakpoint == vars.$bkp-650 {
-    @media screen and (min-width: 650px) {
-      @content;
-    }
-  } @else if $breakpoint == vars.$bkp-1080 {
-    @media screen and (min-width: 1080px) {
-      @content;
-    }
-  } @else if $breakpoint == vars.$bkp-1440 {
-    @media screen and (min-width: 1440px) {
-      @content;
-    }
+@mixin respond-to($bp) {
+  @if type-of($bp) != 'number' {
+    @error "Le breakpoint doit être un nombre (ex : 667 ou 667px). Vous avez passé `#{$bp}`.";
+  }
+
+  // Si l’utilisateur écrit 667 → on convertit en 667px
+  @if unitless($bp) {
+    $bp: $bp * 1px;
+  }
+
+  @media (min-width: $bp) {
+    @content;
   }
 }
+

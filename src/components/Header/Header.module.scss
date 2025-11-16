@@ -1,0 +1,19 @@
+@use "../../sass/abstracts/mixins" as mix;
+@use "../../sass/abstracts/variables" as vars;
+
+.header {
+  @include mix.flex-cont(null, space-between, null, null);
+  padding: 1rem;
+  width: 100%;
+  @include mix.respond-to(1240) {
+    margin: 0 auto;
+  }
+}
+.logo {
+  height: 2.3rem;
+  transform-origin: left center;
+  transition: transform 2.3s ease;
+  @include mix.respond-to(1024) {
+    transform: scale(1.43);
+  }
+}

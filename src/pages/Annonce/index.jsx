@@ -1,13 +1,12 @@
-import React from "react";
-import styles from "./Annonce.module.scss";
 import { useParams } from "react-router-dom";
+import styles from "./Annonce.module.scss";
 
 export default function Annonce() {
-  const params = useParams();
-  const { id } = params;
+  const { id } = useParams();
+
   return (
     <div className={styles.Annonce}>
-      Annonce numéro : {id}  
+      Annonce numéro : {id} 
     </div>
   );
 }

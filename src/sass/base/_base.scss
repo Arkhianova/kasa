@@ -1,4 +1,6 @@
-@use '../abstracts/variables' as vars;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
 
 html {
   scroll-behavior: smooth;
@@ -9,3 +11,21 @@ body {
   user-select: none;
 }
 
+a:visited {
+  color: black;
+  text-decoration: none; 
+}
+main, header {
+   max-width: 1240px;
+}
+main {
+  padding: 2rem 1rem;
+ 
+}
+
+#root {
+  @include mix.flex-cont(column, flex-start, stretch, null);
+  min-height: 100vh;
+  width: 100%;
+  
+}

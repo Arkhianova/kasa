@@ -1,0 +1,17 @@
+@use "../../sass/abstracts/mixins" as mix;
+@use "../../sass/abstracts/variables" as vars;
+
+.gallery {
+  padding: 1rem 0;
+  @include mix.flex-cont(column, flex-start, center, 16px);
+  @include mix.respond-to(768) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    background-color: vars.$gallery-bg;
+    margin-top: 1rem;
+    border-radius: 25px;
+    padding: 2rem 1rem;
+  } 
+}

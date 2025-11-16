@@ -1,10 +1,29 @@
-import React from "react";
+import {NavLink} from "react-router-dom";
 import styles from "./NavBar.module.scss";
 
 export default function NavBar() {
   return (
-    <div className={styles.navbar}>
-      NavBar
-    </div>
+     <nav>
+      <ul>
+        <li className={`${styles.navItem} ${styles.home}`}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+            
+            end
+          >
+            Accueil
+          </NavLink>
+        </li>
+        <li className={`${styles.navItem} ${styles.about}`}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            A propos
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }

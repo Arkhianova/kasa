@@ -1,10 +1,12 @@
-import React from "react";
-import styles from "./Home.module.scss";
+// import styles from "./Home.module.scss";
+import Banner from "../../components/Banner";
+import Gallery from "../../components/Gallery";
 
 export default function Home() {
   return (
-    <div className={styles.Home}>
-      Home
-    </div>
+    <>
+      <Banner page="home" />
+      <Gallery />
+    </>
   );
 }

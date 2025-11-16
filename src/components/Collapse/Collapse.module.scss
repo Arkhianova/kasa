@@ -1,0 +1,45 @@
+@use "../../sass/abstracts/mixins" as mix;
+@use "../../sass/abstracts/variables" as vars;
+@use "../../sass/base/typography" as typo;
+
+.collapse {
+  overflow: hidden; 
+  width: 100%;
+  border-radius: 0.325rem;
+}
+
+.header {
+  @include mix.flex-cont(null, space-between, center, null);
+  background-color: vars.$main-color;
+  padding: 0.6rem;
+  cursor: pointer;
+  // border-radius: 0.325rem;
+}
+.titre {
+  color: vars.$white-font;
+  @include typo.typo-title {
+    font-size: 0.8rem;
+  };
+}
+.content {
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  display: block; // obligatoire pour casser l’héritage du flex
+  background-color: vars.$collapse-bg;
+  border-radius: 0 0 0.325rem 0.325rem;
+}
+
+.paragraph {
+  margin: 0;
+  color: vars.$black-font;
+  text-align: justify;
+  line-height: 1.43;/* 143% converti en ratio */
+  @include typo.typo-meta {
+    font-weight: 400;
+  };
+}
+
+.icon {
+  width: 1rem;
+  height: 0.571rem;
+}

@@ -1,0 +1,35 @@
+@use "../../sass/abstracts/mixins" as mix;
+@use "../../sass/abstracts/variables" as vars;
+@use "../../sass/base/typography" as typo;
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  @include mix.flex-cont(null, space-between, center, 1.625rem);
+}
+nav a {
+  @include typo.typo-meta {
+    text-transform: uppercase;
+  }
+}
+.navItem {
+  transform-origin: right center;
+  transition: transform 2.3s ease;
+}
+
+.navItem.home {
+  @include mix.respond-to(1024) {
+    transform: translateX(-3.56rem) scale(1.43);
+  }
+}
+.navItem.about {
+  @include mix.respond-to(1024) {
+    transform: scale(1.43);
+  }
+}
+.active {
+  text-decoration: underline;
+  color: vars.$black-font;
+}

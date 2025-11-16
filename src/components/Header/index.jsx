@@ -1,10 +1,16 @@
-import React from "react";
 import styles from "./Header.module.scss";
+import Navbar from '../NavBar';
+import logoHeader from '../../assets/logo-header.png';
 
 export default function Header() {
   return (
-    <div className={styles.header}>
-      Header
-    </div>
+    <header className={styles.header}>
+      <img 
+        src={logoHeader} 
+        alt="Logo header" 
+        className={styles.logo}
+      />
+      <Navbar />
+    </header>
   );
 }

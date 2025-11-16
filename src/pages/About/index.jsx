@@ -1,10 +1,12 @@
-import React from "react";
-import styles from "./About.module.scss";
+// import styles from "./About.module.scss";
+import Banner from "../../components/Banner";
+import CollapseGroup from "../../components/CollapseGroup";
 
 export default function About() {
   return (
-    <div className={styles.About}>
-      About
-    </div>
+    <>
+      <Banner page="about" />
+      <CollapseGroup />
+    </>
   );
 }
