@@ -7,7 +7,7 @@ nav {
   align-items: center;
 }
 nav ul {
-  @include mix.flex-cont(null, space-between, center, 1.625rem);
+  @include mix.flex-cont(null, space-between, center, 1rem);
 }
 nav a {
   @include typo.typo-meta {

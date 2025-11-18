@@ -3,9 +3,13 @@
 @use "../../sass/base/typography" as typo;
 
 .collapse {
-  overflow: hidden; 
+  overflow: hidden;
   width: 100%;
   border-radius: 0.325rem;
+}
+
+.collapse:has(.open) .header {
+  border-radius: 0.625rem;
 }
 
 .header {
@@ -13,33 +17,59 @@
   background-color: vars.$main-color;
   padding: 0.6rem;
   cursor: pointer;
-  // border-radius: 0.325rem;
+  border-radius: 0.325rem;
 }
 .titre {
   color: vars.$white-font;
+  transition: font-size 2.3s ease;
   @include typo.typo-title {
-    font-size: 0.8rem;
-  };
+    font-size: 13px;
+    @include mix.respond-to(1024) {
+      font-size: 24px;
+    }
+  }
 }
 .content {
-  padding: 0.5rem 0.8rem;
+  max-height: 0;
+  overflow: hidden;
   text-align: left;
-  display: block; // obligatoire pour casser l’héritage du flex
   background-color: vars.$collapse-bg;
   border-radius: 0 0 0.325rem 0.325rem;
+  transition: max-height 0.3s ease;
+}
+.open {
+  max-height: 300px; // suffisamment large pour un paragraphe
 }
 
 .paragraph {
+  padding: 0.5rem 0.8rem;
   margin: 0;
   color: vars.$black-font;
-  text-align: justify;
-  line-height: 1.43;/* 143% converti en ratio */
+  transform: translateY(-50px); // décalé vers le haut
+  transition: transform 0.5s ease;
+  line-height: 1.43; /* 143% converti en ratio */
   @include typo.typo-meta {
     font-weight: 400;
-  };
+    @include mix.respond-to(1024) {
+      font-size: 18px;
+    }
+  }
+}
+.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .icon {
   width: 1rem;
   height: 0.571rem;
+  transition: transform 0.5s ease;
+  @include mix.respond-to(1024) {
+    width: 1.5rem;
+    height: 0.856rem;
+  }
+}
+
+.rotate {
+  transform: rotate(-180deg);
 }

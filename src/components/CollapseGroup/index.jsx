@@ -3,7 +3,6 @@ import Collapse from "../Collapse";
 import jsonData from "../../json_data/valeurs.json";
 
 export default function CollapseGroup() {
-  console.log(jsonData);
   const data = jsonData.map((item) => ({
     index: item.index,
     title: item.titre,
@@ -13,11 +12,7 @@ export default function CollapseGroup() {
   return (
     <section className={styles.collapseGroup}>
       {data.map((item, index) => (
-        <Collapse
-          key={index}
-          title={item.title}
-          content={item.description}
-        />
+        <Collapse key={index} title={item.title} content={item.description} />
       ))}
     </section>
   );

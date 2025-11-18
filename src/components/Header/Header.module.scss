@@ -7,10 +7,11 @@
   width: 100%;
   @include mix.respond-to(1240) {
     margin: 0 auto;
+    padding: 2rem 1rem;
   }
 }
 .logo {
-  height: 2.3rem;
+  height: 2.7rem;
   transform-origin: left center;
   transition: transform 2.3s ease;
   @include mix.respond-to(1024) {

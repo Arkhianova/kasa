@@ -3,7 +3,6 @@ import Card from "../Card";
 import jsonData from "../../json_data/logements.json";
 
 export default function Gallery() {
-  console.log(jsonData);
   const data = jsonData.map((item) => ({
     id: item.id,
     title: item.title,
@@ -23,4 +22,3 @@ export default function Gallery() {
     </section>
   );
 }
-

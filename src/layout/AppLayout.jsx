@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import styles from './AppLayout.module.scss'
+import styles from "./AppLayout.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import "./AppLayout.module.scss";
 
 function AppLayout() {
   return (

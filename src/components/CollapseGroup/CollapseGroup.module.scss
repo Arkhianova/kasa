@@ -1,7 +1,7 @@
 @use "../../sass/abstracts/mixins" as mix;
 
 .collapseGroup {
-  @include mix.flex-cont(column, flex-start, null, 1.2rem);
+  @include mix.flex-cont(column, flex-start, null, 1.5rem);
   margin-top: 2rem;
   max-width: 1023px;
   width: 100%;
