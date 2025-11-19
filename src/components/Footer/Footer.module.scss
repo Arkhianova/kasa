@@ -3,8 +3,7 @@
 @use "../../sass/base/typography" as typo;
 
 .footer {
-  margin-top: 1rem;
-  @include mix.flex-cont(column, center, center, 0.7rem);
+  @include mix.flex-cont(column, center, center, 2.5rem);
   padding: 1rem;
   background-color: vars.$footer-bg;
   min-height: 16rem;
@@ -18,7 +17,7 @@
 }
 
 .copyright {
-  padding: 0 7rem;
+  padding: 1rem 7rem;
   text-align: center;
 }
 

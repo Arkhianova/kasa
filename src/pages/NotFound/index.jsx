@@ -1,10 +1,6 @@
-import React from "react";
 import styles from "./NotFound.module.scss";
+import Error from "../../components/Error";
 
 export default function NotFound() {
-  return (
-    <div className={styles.NotFound}>
-      NotFound
-    </div>
-  );
+  return <Error />;
 }
