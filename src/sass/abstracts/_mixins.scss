@@ -1,7 +1,12 @@
 @use "variables" as vars;
 
 /// Flex container
-@mixin flex-cont($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+@mixin flex-cont(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0
+) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -17,17 +22,7 @@
 
 /// Breakpoints
 @mixin respond-to($bp) {
-  @if type-of($bp) != 'number' {
-    @error "Le breakpoint doit être un nombre (ex : 667 ou 667px). Vous avez passé `#{$bp}`.";
-  }
-
-  // Si l’utilisateur écrit 667 → on convertit en 667px
-  @if unitless($bp) {
-    $bp: $bp * 1px;
-  }
-
   @media (min-width: $bp) {
     @content;
   }
 }
-

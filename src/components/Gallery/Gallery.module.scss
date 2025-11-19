@@ -4,7 +4,7 @@
 .gallery {
   padding: 1rem 0;
   @include mix.flex-cont(column, flex-start, center, 16px);
-  @include mix.respond-to(768) {
+  @include mix.respond-to(768px) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
@@ -13,5 +13,5 @@
     margin-top: 1rem;
     border-radius: 25px;
     padding: 2rem 1rem;
-  } 
+  }
 }

@@ -36,10 +36,10 @@
   text-decoration: none;
   color: inherit; /* garde les couleurs de ton design */
   width: 100%;
-  @include mix.respond-to(768) {
+  @include mix.respond-to(768px) {
     flex: 1 0 45%;
   }
-  @include mix.respond-to(1024) {
+  @include mix.respond-to(1024px) {
     flex: 0 0 30%;
   }
 }

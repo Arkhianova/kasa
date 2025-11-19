@@ -20,12 +20,12 @@ nav a {
 }
 
 .navItem.home {
-  @include mix.respond-to(1024) {
+  @include mix.respond-to(1024px) {
     transform: translateX(-3.56rem) scale(1.43);
   }
 }
 .navItem.about {
-  @include mix.respond-to(1024) {
+  @include mix.respond-to(1024px) {
     transform: scale(1.43);
   }
 }

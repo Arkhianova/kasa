@@ -5,7 +5,7 @@
   @include mix.flex-cont(null, space-between, null, null);
   padding: 1rem;
   width: 100%;
-  @include mix.respond-to(1240) {
+  @include mix.respond-to(1240px) {
     margin: 0 auto;
     padding: 2rem 1rem;
   }
@@ -14,7 +14,7 @@
   height: 2.7rem;
   transform-origin: left center;
   transition: transform 2.3s ease;
-  @include mix.respond-to(1024) {
+  @include mix.respond-to(1024px) {
     transform: scale(1.43);
   }
 }

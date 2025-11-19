@@ -11,7 +11,7 @@
   @include typo.typo-meta {
     color: vars.$white-font;
   }
-  @include mix.respond-to(1024) {
+  @include mix.respond-to(1024px) {
     font-size: 24px;
   }
 }

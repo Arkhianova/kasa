@@ -14,7 +14,7 @@
   color: vars.$main-color;
   transition: font-size 1s ease;
   @include typo.typo-error("code");
-  @include mix.respond-to(1024) {
+  @include mix.respond-to(1024px) {
     font-size: 288px;
     margin-top: unset;
   }
@@ -26,7 +26,7 @@
     flex-wrap: wrap;
   }
   @include typo.typo-error("title") {
-    @include mix.respond-to(1024) {
+    @include mix.respond-to(1024px) {
       font-size: 36px;
     }
   }
@@ -34,7 +34,7 @@
 .backToHome {
   transition: font-size 1s ease;
   @include typo.typo-error("paragraph") {
-    @include mix.respond-to(1024) {
+    @include mix.respond-to(1024px) {
       font-size: 18px;
     }
   }
